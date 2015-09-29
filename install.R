@@ -1,0 +1,5 @@
+#source("http://www.bioconductor.org/biocLite.R")
+#biocLite("ALL")
+#biocLite("Biostrings")
+#biocLite("multtest")
+#library(multtest)
