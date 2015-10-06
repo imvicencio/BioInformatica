@@ -1,3 +1,7 @@
+# Ismael Vicencio
+# BioInformatica 2-2015
+
+
 
 # Funcion que calcula el max vecino para el algoritmo
 maximo <- function(a,b,c){
@@ -81,10 +85,10 @@ for(i in 1:largo_1+1){
       #Mistmatch
       res <- maximo(master[j-1,i-1] - mismatch_valor , master[j-1,i] - gap_valor , master[j,i-1] - gap_valor );
     }
-    message("_____")
-    message("La ",tempo2, " y " , tempo1, " valor:  " , j,":",i ," valor maximo: ", res[1])
-    message("_____")
-    contador = contador+1;
+    #message("_____")
+    #message("La ",tempo2, " y " , tempo1, " valor:  " , j,":",i ," valor maximo: ", res[1])
+    #message("_____")
+    #contador = contador+1;
     
     #completa los valores en las matrices
     master[j,i] = res[1]
@@ -93,13 +97,6 @@ for(i in 1:largo_1+1){
   }
   
 }
-
-
-master
-
-direccion
-
-contador
 
 # Busca el mayor elemento en toda la matriz, fila por fila
 maximo_i = 1;
@@ -127,7 +124,7 @@ posicion = 1;
 
 salir = 0;
 while(salir == 0 ){
-  message("dir: ", direccion[maximo_i, maximo_j])
+  #message("dir: ", direccion[maximo_i, maximo_j])
   if(direccion[maximo_i, maximo_j] == 1 ){ # match o dismatch diagonal
     temporal <- unlist(strsplit(seq1,""))[maximo_j:maximo_j-1]
     vector1 <- paste(substr(vector1, 1, nchar(vector1)), temporal, sep = "");
@@ -135,7 +132,7 @@ while(salir == 0 ){
     temporal2 <- unlist(strsplit(seq2,""))[maximo_i:maximo_i-1]
     vector2 <- paste(substr(vector2, 1, nchar(vector2)), temporal2, sep = "");
     
-    message("v1-> ",temporal , " --  v2->", temporal2 )
+    #message("v1-> ",temporal , " --  v2->", temporal2 )
     temporal <- ""
     temporal2 <- ""
     
@@ -152,7 +149,7 @@ while(salir == 0 ){
       posicion = posicion + 1;
       maximo_i = maximo_i - 1;
       
-      message("v1-> ",temporal , " --  v2->", temporal2 )
+      #message("v1-> ",temporal , " --  v2->", temporal2 )
       temporal <- ""
       temporal2 <- ""
       
@@ -165,7 +162,7 @@ while(salir == 0 ){
         posicion = posicion + 1;
         maximo_j = maximo_j - 1;
         
-        message("v1-> ",temporal , " --  v2->", temporal2 )
+        #message("v1-> ",temporal , " --  v2->", temporal2 )
         temporal <- ""
         temporal2 <- ""
       }
@@ -221,3 +218,5 @@ if(largo_1 == largo_2){
 }
 
 message("Valor: ", valor)
+message("Secuencia 1: ", vector1)
+message("Secuencia 2: ", vector2)

@@ -1,0 +1,1 @@
+# Analisis de smith -  Waterman utilizando la version que incluye el paquete Biostring de Bioconductor
