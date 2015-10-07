@@ -1,6 +1,6 @@
 # Ismael Vicencio
 # BioInformatica 2-2015
-
+library(IRanges)
 
 
 # Funcion que calcula el max vecino para el algoritmo
@@ -38,10 +38,10 @@ maximo <- function(a,b,c){
 
 ####################
 
-#seq1 = "GAATTCCTACTACGAAGAATTCCTACTACGAAACTACGAAAATTCCTACTACGA"
-#seq2 = "GAATTCCTACTACGGAATTCCCCTCCCATAATTCCTACTACGA"
-seq1 = "CGTGAATTCAT"
-seq2 = "GACTTAC"
+seq1 <- "GAATTCCTACTACGAAGAATTCCTACTACGAAACTACGAAAATTCCTACTACGA"
+seq2 <- "GAATTCCTACTACGGAATTCCCCTCCCATAATTCCTACTACGA"
+#seq1 <- "CGTGAATTCAT"
+#seq2 <- "GACTTAC"
 
 #seq1 <- "ATCG"
 #seq2 <- "TCC"
@@ -50,6 +50,10 @@ seq2 = "GACTTAC"
 # Obtiene el tamaño de los vectores
 largo_1 = nchar(seq1);
 largo_2 = nchar(seq2);
+
+largo_1
+largo_2
+
 
 # Master contiene el peso de cada accion
 master = matrix(0, nrow = largo_2+1, ncol = largo_1+1);
@@ -218,5 +222,6 @@ if(largo_1 == largo_2){
 }
 
 message("Valor: ", valor)
-message("Secuencia 1: ", vector1)
-message("Secuencia 2: ", vector2)
+message("Secuencia 1: ", reverse(vector1))
+message("Secuencia 2: ", reverse(vector2))
+nchar(vector1)

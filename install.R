@@ -3,3 +3,6 @@
 #biocLite("Biostrings")
 #biocLite("multtest")
 #library(multtest)
+
+source("http://bioconductor.org/biocLite.R")
+biocLite("annotate")
